@@ -17,7 +17,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-ng-app="leaveApp">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             
@@ -28,9 +28,9 @@
             
             <!-- navbar left -->
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Leave</a></li>
-              <li><a href="#">Setting</a></li> 
+              <li class="active"><a href="#/welcome">Home</a></li>
+              <li><a href="#/applyLeave">Leave</a></li>
+              <li><a href="#/setting">Setting</a></li> 
               <li><a href="#">About us</a></li>
               <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
@@ -50,12 +50,32 @@
             </ul>
         </div>
     </nav>
-
+      
+    <!-- content area-->
+    <div class="container">
+        <div data-ng-view=""></div>
+    </div>
+    
+    <!-- Footer area-->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="container">
+        <p class="text-muted text-center">Place sticky footer content here.</p>
+      </div>
+    </footer>  
+      
+      
     <!-- all libs place at the bottom so page load first-->
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    
+    <!-- all angular sub lib must place after core angular lib -->
+    <script src="js/angular-route.min.js"></script>
+    
+    <!-- App libs-->
+    <script src="app.js"></script>
   </body>
 </html>
