@@ -9,17 +9,25 @@ var app = angular.module('leaveApp', [
   
 app.config(['$routeProvider',
     function($routeProvider) {
-        $routeProvider.
-            when('/welcome', {
+        $routeProvider
+            .when('/welcome', {
               templateUrl: 'views/welcome.html',
               controller: 'SimpleController'
-            }).
-            when('/applyLeave', {
+            })
+            .when('/applyLeave', {
               templateUrl: 'views/applyLeave.html',
               controller: 'SimpleController'
-            }).
-            otherwise({
+            })
+            .when('/category', {
+              templateUrl: 'views/category.html',
+              controller: 'SimpleController'
+            })
+            .otherwise({
               redirectTo: '/welcome'
             });
   }]);
 
+// Add Simple Controller
+app.controller('SimpleController', function($scope){
+    $scope.message = "This is the Add Order screen.";
+});

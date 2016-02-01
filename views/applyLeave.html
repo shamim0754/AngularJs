@@ -1,1 +1,67 @@
-apply
+<h3  style="margin-top:82px;" class="text-center">Leave Application Form</h3>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name </label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="idcard">ID Card No  </label>
+      <div class="col-sm-4"> 
+        <input type="text" class="form-control" id="idcard" name="idcard" placeholder="Enter idcard" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="designation">Designation  </label>
+      <div class="col-sm-4"> 
+        <input type="text" class="form-control" id="designation" name="designation" placeholder="Enter designation" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="department">Department </label>
+      <div class="col-sm-4"> 
+        <input type="text" class="form-control" id="department" name="department" placeholder="Enter department" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fromDate">From Date  </label>
+      <div class="col-sm-2"> 
+        <div class="input-group">
+            <input type="text" name="fromDate" id="fromDate" class="date-picker form-control" value="" required/>
+            <span class="input-group-addon btn" id="delivery_startcal_btn">
+                <span class="glyphicon glyphicon-calendar" />
+             </span>
+         </div>
+      </div>
+      <label class="control-label col-sm-1" for="fromDate">To Date  </label>
+      <div class="col-sm-2"> 
+        <div class="input-group">
+            <input type="text" name="fromDate" id="fromDate" class="date-picker form-control" value="" required/>
+            <span class="input-group-addon btn" id="delivery_startcal_btn">
+                <span class="glyphicon glyphicon-calendar" />
+             </span>
+         </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="kindsleave">Kinds Of Leave </label>
+      <div class="col-sm-4"> 
+          <select class="form-control" name="kindsleave" required>
+          </select>    
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="causeleave">Cause of Leave </label>
+      <div class="col-sm-4"> 
+          <textarea class="form-control" name="causeleave" required rows="7">
+          </textarea>
+      </div>
+    </div>
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-4">
+          <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok">Apply</button>
+      </div>
+    </div>
+</form
+
