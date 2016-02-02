@@ -19,73 +19,37 @@
     <![endif]-->
   </head>
   <body data-ng-app="leaveApp">
-        <div class="container">
-            <div class="row">
-                <div class="col-*-*">
-                    <nav class="navbar navbar-inverse navbar-fixed-top">
-                        <div class="container-fluid">
+        <header>
+            <div data-ng-include="'layout/header.html'"></div>
+        </header> 
 
-                            <!-- navbar header -->
-                            <div class="navbar-header">
-                              <a class="navbar-brand" href="#">Online Leave Application</a>
-                            </div>
 
-                            <!-- navbar left -->
-                            <ul class="nav navbar-nav">
-                              <li class="active"><a href="#/welcome">Home</a></li>
-                              <li><a href="#/applyLeave">Leave</a></li>
-                              <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-                                    <span class="caret"></span>Setting</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#/category">Category</a></li>
-                                        <li><a href="#/employees">Employee</a></li>
-                                        <li><a href="#/role">Role</a></li> 
-                                    </ul>
-                              </li> 
-                              <li><a href="#">About us</a></li>
-                            </ul>
-
-                            <!-- navbar right -->
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    
         <div class="container">
             <div data-ng-view=""></div>
         </div> 
-      
+
         <!-- Footer area-->
         <footer class="footer navbar-fixed-bottom">
-            <div class="container">
-              <p class="text-muted text-center">&copy; 2016 javaaround, Inc.</p>
-            </div>
+            <div data-ng-include="'layout/footer.html'"></div>
         </footer> 
      
-     
-    <!-- all libs place at the bottom so page load first-->
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery/jquery.min.js"></script>
-    
-    <!-- jQuery ui -->
-    <script src="js/jquery_ui/jquery-ui.min.js"></script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/angular/angular.min.js"></script>
-    
-    <!-- all angular sub lib must place after core angular lib -->
-    <script src="js/angular/angular-route.min.js"></script>
-    
-    <!-- App libs-->
-    <script src="app.js"></script>
-    <script src="controller/controllers.js"></script>
+        <!-- all libs place at the bottom so page load first-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery/jquery.min.js"></script>
+
+        <!-- jQuery ui -->
+        <script src="js/jquery_ui/jquery-ui.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/angular/angular.min.js"></script>
+
+        <!-- all angular sub lib must place after core angular lib -->
+        <script src="js/angular/angular-route.min.js"></script>
+
+        <!-- App libs-->
+        <script src="app.js"></script>
+        <script src="controller/controllers.js"></script>
   </body>
 </html>
