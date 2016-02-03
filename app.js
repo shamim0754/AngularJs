@@ -31,11 +31,11 @@ app.config(['$routeProvider',
             })
             .when('/category', {
               templateUrl: 'views/category.html',
-              controller: 'SimpleController'
+              controller: 'CategoryController'
             })
             .when('/category/:id', {
               templateUrl: 'views/category.html',
-              controller: 'SimpleController'
+              controller: 'CategoryController'
             })
             .when('/employees', {
               templateUrl: 'views/employees.html',
@@ -47,11 +47,11 @@ app.config(['$routeProvider',
             })
             .when('/role', {
               templateUrl: 'views/role.html',
-              controller: 'SimpleController'
+              controller: 'RoleController'
             })
             .when('/role/:id', {
               templateUrl: 'views/role.html',
-              controller: 'SimpleController'
+              controller: 'RoleController'
             })
             .otherwise({
               redirectTo: '/welcome'
