@@ -1,6 +1,6 @@
 ﻿//This handles retrieving data and is used by controllers. 3 options (server, factory, provider) with 
 //each doing the same thing just structuring the functions/data differently.
-app.service('rolesService', function () {
+app.service('rolesService', function ($http) {
     this.getRoles = function () {
         return roles;
     };
@@ -12,6 +12,20 @@ app.service('rolesService', function () {
             name: roleName,
             rank: roleRank
         });
+        // Simple post request example:
+        $http({
+          method : 'POST',
+          url : '/leave_app/function/manage_role_action.php' ,
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}, //default application/json serialize
+          data : { name : roleName , rank : roleRank }
+        }).then(function successCallback(response) {
+            console.log(response);
+            // this callback will be called asynchronously
+            // when the response is available
+          }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+          });
     };
     this.updateRole = function (id , roleName, roleRank) {
         for (var i = 0; i < roles.length; i++) {

@@ -33,7 +33,7 @@ app.controller('RoleController', function($scope , rolesService , $routeParams){
         rolesService.deleteRole(id);
     };
     //update role
-    $scope.updateRole = function(id){
+   /* $scope.updateRole = function(id){
         console.log(id + $scope.role_name + $scope.role_rank);
         rolesService.updateRole(id , $scope.role_name , $scope.role_rank);
     };
@@ -42,7 +42,7 @@ app.controller('RoleController', function($scope , rolesService , $routeParams){
         $scope.role_name = role.name;
         $scope.role_rank = role.rank;
     }
-    
+    */
     $scope.role_id = $routeParams.id;
 });
 
