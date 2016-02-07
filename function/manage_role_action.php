@@ -13,14 +13,14 @@ $crud = new DBCrud();
 $fileData = file_get_contents("php://input");
 $objFileData = json_decode($fileData);
 
-echo $rolename = $objFileData -> name;//Get user password
-die;
-echo $rolename = $_POST['name'];
+$roleName = $objFileData -> name;//Get user password
+$roleRank = $objFileData -> rank;//Get user password
+
 $crud -> insert("role",[
-    'name' => $rolename , 
-    'rank' => 'test' , 
+    'name' => $roleName , 
+    'rank' => $roleRank , 
     'created_by' => 'shamim' , 
     'created_date' => $today 
 ]);
-echo $crud == null ? "Not connected" : "Connected";
+//echo "successfully added";
 

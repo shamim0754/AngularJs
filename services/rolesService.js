@@ -1,8 +1,22 @@
 ﻿//This handles retrieving data and is used by controllers. 3 options (server, factory, provider) with 
 //each doing the same thing just structuring the functions/data differently.
-app.service('rolesService', function ($http) {
+app.service('rolesService', function ($http ) {
     this.getRoles = function () {
-        return roles;
+        
+        // add into db
+        $http({
+          method : 'GET',
+          url : '/leave_app/function/role_data.php' 
+        }).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+            console.log(response);
+             return response;
+          }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+          });
+         
     };
 
     this.insertRole = function (roleName, roleRank) {
@@ -12,16 +26,16 @@ app.service('rolesService', function ($http) {
             name: roleName,
             rank: roleRank
         });
-        // Simple post request example:
+        // add into db
         $http({
           method : 'POST',
           url : '/leave_app/function/manage_role_action.php' ,
           headers: {'Content-Type': 'application/x-www-form-urlencoded'}, //default application/json serialize
           data : { name : roleName , rank : roleRank }
         }).then(function successCallback(response) {
-            console.log(response);
             // this callback will be called asynchronously
             // when the response is available
+            
           }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
@@ -53,11 +67,11 @@ app.service('rolesService', function ($http) {
         }
         return null;
     };
-    var roles = [
+    /*var roles = [
         { 
             id : '1' , 
             name : 'manager' , 
             rank : '1st class' 
         } 
-    ];
+    ];*/
 });

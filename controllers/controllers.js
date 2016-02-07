@@ -26,6 +26,7 @@ app.controller('RoleController', function($scope , rolesService , $routeParams){
         rolesService.insertRole($scope.role_name , $scope.role_rank);
         $scope.role_name = '';
         $scope.role_rank = '';
+        $scope.msg = 'successfully added';
     };
     
     //delete role
